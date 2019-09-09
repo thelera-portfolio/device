@@ -6,130 +6,131 @@
   </head>
   <body>
     <!-- Шапка сайта -->
-    <header class="shop-header">
+    <header class="header">
       <!-- Блок с навигацией -->
-      <nav class="shop-nav">
+      <nav class="nav">
         <!-- Логотип (независимый блок с модификатором) -->
-        <a class="shop-logo shop-logo_header" href="index.html">
+        <a class="logo logo_header" href="index.html">
             <img src="https://via.placeholder.com/164x36" width="164" height="36" alt="Логотип интернет-магазина «Device»">
         </a>  
         <!-- Поиск по сайту (независимый блок с модификатором) -->
-        <input class="shop-search shop-search_header" type="search" id="" name="" placeholder="Поиск по сайту">
+        <input class="search search_header" type="search" id="" name="" placeholder="Поиск по сайту">
         <!-- Раздел пользователя (независимый блок с модификаторами ) -->
-        <ul class="shop-user-account shop-user-account_header shop-user-account_logout">
-            <li><button type="button">Войти</button></li>
+        <ul class="user-account user-account_header user-account_logout">
+            <li class="user-account-list"><button class="user-account-button" type="button">Войти</button></li>
         </ul> 
         <!-- Раздел "Сравнить" (независимый блок с модификатором) -->
-        <a class="shop-compare-button shop-compare-button_header" href="">Сравнить</a>
+        <a class="compare-button compare-button_header" href="#">Сравнить</a>
         <!-- Корзина (независимый блок с модификатором) -->
-        <a class="shop-basket shop-basket_header" href="">Корзина</a>
-        <!-- Основная навигация (независимый блок shop-nav с модификатором и с другим независимым блоком выпадающего списка shop-nav-list внутри) -->
-        <ul class="shop-nav shop-nav_header">
-          <li class="shop-nav__item"><a class="shop-nav__link" href="">Каталог товаров</a>
-            <ul class="shop-nav-list" >
-              <li class="shop-nav-list__item"><a class="shop-nav-list__link" href="">Виртуальная реальность </a></li>
-              <li class="shop-nav-list__item"><a class="shop-nav-list__link" href="">Моноподы для селфи </a></li>
-              <li class="shop-nav-list__item"><a class="shop-nav-list__link" href="">Экшн-камеры </a></li>
-              <li class="shop-nav-list__item"><a class="shop-nav-list__link" href="">Фитнес-браслеты </a></li>
-              <li class="shop-nav-list__item"><a class="shop-nav-list__link" href="">Умные часы </a></li>
-              <li class="shop-nav-list__item"><a class="shop-nav-list__link" href="">Квадрокоптеры</a></li>
+        <a class="basket basket_header" href="#">Корзина</a>
+        <!-- Основная навигация (независимый блок navigation-list с модификатором navigation-list_header и с другим независимым блоком выпадающего списка navigation-list__list внутри) -->
+        <ul class="navigation-list navigation-list_header">
+          <li class="navigation-list__item"><a class="navigation-list__link" href="#">Каталог товаров</a>
+            <ul class="navigation-list__inner-list catalog-menu" >
+              <li class="catalog-menu__item"><a class="catalog-menu__link" href="#">Виртуальная реальность </a></li>
+              <li class="catalog-menu__item"><a class="catalog-menu__link" href="#">Моноподы для селфи </a></li>
+              <li class="catalog-menu__item"><a class="catalog-menu__link" href="#">Экшн-камеры </a></li>
+              <li class="catalog-menu__item"><a class="catalog-menu__link" href="#">Фитнес-браслеты </a></li>
+              <li class="catalog-menu__item"><a class="catalog-menu__link" href="#">Умные часы </a></li>
+              <li class="catalog-menu__item"><a class="catalog-menu__link" href="#">Квадрокоптеры</a></li>
             </ul>
           </li>
-          <li class="shop-nav__item"><a class="shop-nav__link" href="">Доставка</a></li>
-          <li class="shop-nav__item"><a class="shop-nav__link" href="">Гарантия</a></li>
-          <li class="shop-nav__item"><a class="shop-nav__link" href="">Контакты</a></li>
+          <li class="navigation-list__item"><a class="navigation-list__link" href="#">Доставка</a></li>
+          <li class="navigation-list__item"><a class="navigation-list__link" href="#">Гарантия</a></li>
+          <li class="navigation-list__item"><a class="navigation-list__link" href="#">Контакты</a></li>
         </ul>
       </nav>
     </header>
 
     <!-- Основное содержимое -->
-    <main class="shop-main">
+    <main class="main">
       <!-- Название страницы -->
-      <h1 class="shop-main__title">Основная информация о интернет-магазине "Device"</h1>
+      <h1 class="main__title">Основная информация о интернет-магазине "Device"</h1>
       <!-- Промо-слайдер с товарами -->
-      <section class="shop-promo-slider">
-        <h2 class="shop-promo-slider__title"></h2>
+      <section class="promo-slider">
+        <h2 class="promo-slider__title"></h2>
       </section>
       <!-- Полулярные товары -->
-      <section class="shop-popular">
-        <h2 class="shop-popular__title"></h2>
+      <section class="popular">
+        <h2 class="popular__title"></h2>
       </section>
       <!-- Слайдер с преимуществами компании -->
-      <section class="shop-services-slider">
-        <h2 class="shop-services-slider__title"></h2>
+      <section class="services-slider">
+        <h2 class="services-slider__title"></h2>
       </section>
       <!-- Бренды -->
-      <section class="shop-brands">
-        <h2 class="shop-brands__title"></h2>
+      <section class="brands">
+        <h2 class="brands__title"></h2>
       </section>
       <!-- Информация о магазине -->
-      <section class="shop-info">
-          <h2 class="shop-info__title">О нас</h2>
-          <p class="shop-info__paragraph">Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас. </p>
-          <p class="shop-info__paragraph">Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями: </p>
-            <ul class="shop-info__list">
-              <li class="shop-info__item"><a class="shop-info__link" href="">Деловые Линии</a></li>
-              <li class="shop-info__item"><a class="shop-info__link" href="">Автотрейдинг </a></li>
-              <li class="shop-info__item"><a class="shop-info__link" href="">ЖелДорЭкспедиция</a></li>
+      <section class="information">
+          <h2 class="information__title">О нас</h2>
+          <p class="information__text">Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас. </p>
+          <p class="information__text">Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями: </p>
+            <ul class="information__list">
+              <li class="information__item"><a class="information__link" href="#">Деловые Линии</a></li>
+              <li class="information__item"><a class="information__link" href="#">Автотрейдинг </a></li>
+              <li class="information__item"><a class="information__link" href="#">ЖелДорЭкспедиция</a></li>
             </ul>
-          <a class="shop-info__button" href="">Подробне о нас</a>
+          <a class="information__button" href="#">Подробне о нас</a>
       </section>
 
       <!-- Контакты офиса -->
-      <section class="shop-contacts">
-        <h2 class="shop-contacts__title">Контакты</h2>
-        <p class="shop-contacts__paragraph">Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
-        <a class="shop-contacts__link" href=""><img class="shop-contacts__image" src="img/map.jpg" alt="Карта офиса по адресу: улица Строителей, 15"></a>
-        <a class="shop-contacts__button" href="">Напишите нам</a>
+      <section class="contacts">
+        <h2 class="contacts__title">Контакты</h2>
+        <p class="contacts__text">Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
+        <a class="contacts__link" href="#"><img class="contacts__image" src="img/map.jpg" alt="Карта офиса по адресу: улица Строителей, 15"></a>
+        <a class="contacts__button" href="#">Напишите нам</a>
       </section>
     </main>
     
     <!-- Подвал сайта -->
-    <footer class="shop-footer">
+    <footer class="footer">
       <!-- Логотип (независимый блок с модификатором) -->
-      <a class="shop-logo shop-logo_footer" href="index.html">
+      <a class="logo logo_footer" href="index.html">
           <img src="https://via.placeholder.com/164x36" width="164" height="36" alt="Логотип интернет-магазина «Device»">
       </a> 
-      <!-- Адрес (элемент блока shop-footer) -->
-      <p class="shop-footer__paragraph">г. Москва, ул. Строителей, 15 </p>
+      <!-- Адрес (элемент блока footer) -->
+      <p class="footer__text">г. Москва, ул. Строителей, 15 </p>
       <!-- Карточка пользователя (независимый блок с модификатором) -->
-      <ul class="shop-user-account shop-user-account_footer ">
+      <ul class="user-account user-account_footer ">
           <li><button type="button">Войти</button></li>
       </ul> 
       <!-- Раздел "Сравнить" (независимый блок с модификатором) -->
-      <a class="shop-compare-button shop-compare-button_footer" href="">Сравнить</a>
+      <a class="compare-button compare-button_footer" href="#">Сравнить</a>
       <!-- Корзина (независимый блок с модификатором) -->
-      <a class="shop-basket shop-basket_footer" href="">Корзина</a>
+      <a class="basket basket_footer" href="#">Корзина</a>
       <!-- Навигация (независимый блок с модификатором)-->
-      <ul class="shop-nav shop-nav_footer">
-        <li class="shop-nav__item"><a class="shop-nav__link" href="">Доставка</a></li>
-        <li class="shop-nav__item"><a class="shop-nav__link" href="">Гарантия</a></li>
-        <li class="shop-nav__item"><a class="shop-nav__link" href="">Контакты</a></li>
+      <ul class="navigation-list navigation-list_footer">
+        <li class="navigation-list__item"><a class="navigation-list__link" href="#">Доставка</a></li>
+        <li class="navigation-list__item"><a class="navigation-list__link" href="#">Гарантия</a></li>
+        <li class="navigation-list__item"><a class="navigation-list__link" href="#">Контакты</a></li>
       </ul>
-      <!-- Телефон (элемент блока shop-footer) -->
-      <p class="shop-footer__paragraph">Тел.: +7 (495) 495-95-95</p>
+      <!-- Телефон (элемент блока footer) -->
+      <p class="footer__text">
+        <a href="tel: +74959595">Тел.: +7 (495) 495-95-95</a></p>
       <!-- Соц. сети (независимый блок) -->
-      <ul class="shop-socials">
-          <li class="shop-socials__item"><a class="shop-socials__link" href="">Фейсбук</a></li>
-          <li class="shop-socials__item"><a class="shop-socials__link" href="">Инстаграм</a></li>
-          <li class="shop-socials__item"><a class="shop-socials__link" href="">Твиттер</a></li>
+      <ul class="socials">
+          <li class="socials__item"><a class="socials__link" href="#">Фейсбук</a></li>
+          <li class="socials__item"><a class="socials__link" href="#">Инстаграм</a></li>
+          <li class="socials__item"><a class="socials__link" href="#">Твиттер</a></li>
       </ul>
-      <!-- Copyright (элемент блока shop-footer) -->
-      <a class="shop-footer__copyright" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
+      <!-- Copyright (элемент блока footer) -->
+      <a class="footer__copyright" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
     </footer>
 
-    <!-- Попап формы обратной связи -->
-    <section class="write-message-popup">
-        <h2 class="write-message-popup__title">Обратная связь</h2>
-        <p class="write-message-popup__text">Введите свой логин и пароль</p>
+    <!-- Модальное окно формы обратной связи -->
+    <section class="write-message-modal">
+        <h2 class="write-message-modal__title">Обратная связь</h2>
+        <p class="write-message-modal__text">Введите свой логин и пароль</p>
         <!-- Здесь будет форма -->
-        <button class="write-message-popup__button" type="button">Закрыть</button>
+        <button class="write-message-modal__button" type="button">Закрыть</button>
     </section> 
 
-    <!-- Попап карты -->
-    <section class="map-popup">
-        <h2 class="map-popup__title">Как до нас добраться?</h2>
-        <button class="map-popup__button" type="button">Закрыть</button>
+    <!-- Модальное окно карты -->
+    <section class="map-modal">
+        <h2 class="map-modal__title">Как до нас добраться?</h2>
+        <button class="map-modal__button" type="button">Закрыть</button>
     </section> 
   </body>
 </html>
