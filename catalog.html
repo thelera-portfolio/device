@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Каталог интернет-магазина «Device»</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <!-- Шапка сайта -->
@@ -12,32 +13,41 @@
             <!-- Логотип (независимый блок с модификатором) -->
             <a class="logo logo_header" href="index.html">
                 <img src="img/logo-device.svg" width="164" height="36" alt="Логотип интернет-магазина «Device»">
-            </a>  
+            </a>
             <!-- Поиск по сайту (независимый блок с модификатором) -->
-            <input class="search search_header" type="search" id="" name="" placeholder="Поиск по сайту">
+            <form action="https://echo.htmlacademy.ru" method="GET">
+                <label class="visually-hidden" for="search-field">Поле поиска по сайту</label>
+                <input class="search search_header" type="text" id="search-field" name="search"
+                    placeholder="Поиск по сайту">
+                <button type="submit" aria-label="Кнопка поиска по сайту">Найти</button>
+            </form>
             <!-- Раздел пользователя (независимый блок с модификаторами ) -->
-            <ul class="user-account user-account_header user-account_logout">
-                <li class="user-account-list"><button class="user-account-button" type="button">Войти</button></li>
-            </ul> 
+            <ul class="user-account user-account_header user-account_login">
+                <li class="user-account-list">
+                    <a class="user-account-button" href="login.html" aria-label="Кнопка входа в личный кабинет">Войти</a>
+                </li>
+            </ul>
             <!-- Раздел "Сравнить" (независимый блок с модификатором) -->
-            <a class="compare-button compare-button_header" href="#">Сравнить</a>
+            <a class="compare-button compare-button_header" href="#"
+                aria-label="Раздел сравнения выбранных товаров">Сравнить</a>
             <!-- Корзина (независимый блок с модификатором) -->
-            <a class="basket basket_header" href="#">Корзина</a>
-            <!-- Основная навигация (независимый блок nav с модификатором и с другим независимым блоком выпадающего списка nav-list внутри) -->
+            <a class="basket basket_header" href="#" aria-label="Вход в корзину покупок">Корзина</a>
+            <!-- Основная навигация (независимый блок navigation-list с модификатором navigation-list_header и с другим независимым блоком выпадающего списка navigation-list__list внутри) -->
             <ul class="navigation-list navigation-list_header">
-            <li class="navigation-list__item"><a class="navigation-list__link" href="#">Каталог товаров</a>
-                <ul class="navigation-list__inner-list catalog-menu" >
-                <li class="catalog-menu__item"><a class="catalog-menu__link" href="#">Виртуальная реальность </a></li>
-                <li class="catalog-menu__item"><a class="catalog-menu__link" href="#">Моноподы для селфи </a></li>
-                <li class="catalog-menu__item"><a class="catalog-menu__link" href="#">Экшн-камеры </a></li>
-                <li class="catalog-menu__item"><a class="catalog-menu__link" href="#">Фитнес-браслеты </a></li>
-                <li class="catalog-menu__item"><a class="catalog-menu__link" href="#">Умные часы </a></li>
-                <li class="catalog-menu__item"><a class="catalog-menu__link" href="#">Квадрокоптеры</a></li>
-                </ul>
-            </li>
-            <li class="navigation-list__item"><a class="navigation-list__link" href="#">Доставка</a></li>
-            <li class="navigation-list__item"><a class="navigation-list__link" href="#">Гарантия</a></li>
-            <li class="navigation-list__item"><a class="navigation-list__link" href="#">Контакты</a></li>
+                <li class="navigation-list__item"><a class="navigation-list__link" href="#">Каталог товаров</a>
+                    <ul class="navigation-list__inner-list catalog-menu">
+                        <li class="catalog-menu__item"><a class="catalog-menu__link" href="#">Виртуальная реальность </a>
+                        </li>
+                        <li class="catalog-menu__item"><a class="catalog-menu__link" href="#">Моноподы для селфи </a></li>
+                        <li class="catalog-menu__item"><a class="catalog-menu__link" href="#">Экшн-камеры </a></li>
+                        <li class="catalog-menu__item"><a class="catalog-menu__link" href="#">Фитнес-браслеты </a></li>
+                        <li class="catalog-menu__item"><a class="catalog-menu__link" href="#">Умные часы </a></li>
+                        <li class="catalog-menu__item"><a class="catalog-menu__link" href="#">Квадрокоптеры</a></li>
+                    </ul>
+                </li>
+                <li class="navigation-list__item"><a class="navigation-list__link" href="#">Доставка</a></li>
+                <li class="navigation-list__item"><a class="navigation-list__link" href="#">Гарантия</a></li>
+                <li class="navigation-list__item"><a class="navigation-list__link" href="#">Контакты</a></li>
             </ul>
         </nav>
     </header>
@@ -54,19 +64,49 @@
         
         <!-- Раздел с фильтрами -->
         <section class="catalog-filters">
-            <h2 class="catalog-filters__title">Фильтр товаров</h2>
-            <!-- Тут будет форма -->
+            <h2 class="catalog-filters__title">Фильтр:</h2>
+            <form class="catalog-filters__form catalog-filters-form" action="https://echo.htmlacademy.ru" method="GET">
+                <fieldset>
+                    <legend class="catalog-filters-form__legend">Стоимость</legend>
+                    <input class="catalog-filters-form__range" type="range" name="item-price">
+                </fieldset>
+                <fieldset>
+                    <legend class="catalog-filters-form__legend">Цвет</legend>
+                    <input class="catalog-filters-form__checkbox" type="checkbox" id="filter-black-color" name="item-color" value="black-color" checked>
+                    <label class="catalog-filters-form__label" for="filter-black-color">Черный</label>
+                    <input class="catalog-filters-form__checkbox" type="checkbox" id="filter-white-color" name="item-color" value="white-color">
+                    <label class="catalog-filters-form__label" for="filter-white-color">Белый</label>
+                    <input class="catalog-filters-form__checkbox" type="checkbox" id="filter-blue-color" name="item-color" value="blue-color" checked>
+                    <label class="catalog-filters-form__label" for="filter-blue-color">Синий</label>
+                    <input class="catalog-filters-form__checkbox" type="checkbox" id="filter-red-color" name="item-color" value="red-color" checked>
+                    <label class="catalog-filters-form__label" for="filter-red-color">Красный</label>
+                    <input class="catalog-filters-form__checkbox" type="checkbox" id="filter-pink-color" name="item-color" value="pink-color">
+                    <label class="catalog-filters-form__label" for="filter-pink-color">Розовый</label>
+                </fieldset>
+                <fieldset>
+                    <legend class="catalog-filters-form__legend">Bluetooth</legend>
+                    <input class="catalog-filters-form__radio" type="radio" id="filter-bluetooth-on" name="bluetooth" value="Есть" checked>
+                    <label class="catalog-filters-form__label" for="filter-bluetooth-on">Есть</label>
+                    <input class="catalog-filters-form__radio" type="radio" id="filter-bluetooth-off" name="bluetooth" value="Нет">
+                    <label class="catalog-filters-form__label" for="filter-bluetooth-off">Нет</label>
+                </fieldset>
+                <button type="submit">Показать</button>
+            </form>
         </section>
 
         <!-- Раздел с сортировкой товаров -->
         <section class="catalog-sort">
-            <h2 class="catalog-sort__title">Сортировка товаров</h2>
-            <!-- Тут будет форма -->
+            <h2 class="catalog-sort__title">Сортировка:</h2>
+            <a class="catalog-sort__link" href="#">По цене</a>
+            <a class="catalog-sort__link" href="#">По типу</a>
+            <a class="catalog-sort__link" href="#">По популярности</a>
+            <a class="catalog-sort__link" href="#" aria-label="Сортировать по возрастанию"></a>
+            <a class="catalog-sort__link" href="#" aria-label="Сортировать по убыванию"></a>
         </section>
 
         <!-- Раздел с товарами -->
         <section class="catalog">
-            <h2 class="catalog__title">Список моноподов</h2>
+            <h2 class="catalog__title visually-hidden">Список моноподов</h2>
             <ul class="catalog__list">
                 <!-- Каждый товар в каталоге - отдельный блок -->
                 <li class="catalog__item catalog-item">
@@ -76,7 +116,7 @@
                     <img class="catalog-item__image" src="img/item-1.jpg" width="360" height="380" alt="Любительская селфи-палка">
                     <p class="catalog-item__price">500 руб.</p>
                     <p class="catalog-item__rollover">
-                        <a class="catalog-item__buy" #="#">В корзину</a>
+                        <a class="catalog-item__buy" href="#">В корзину</a>
                         <a class="catalog-item__compare" href="#">Добавить к сравнению</a>
                     </p>
                 </li>
@@ -87,7 +127,7 @@
                     <img class="catalog-item__image" src="img/item-2.jpg" width="360" height="380" alt="Профессиональная селфи-палка">
                     <p class="catalog-item__price">1 500 руб.</p>
                     <p class="catalog-item__rollover">
-                        <a class="catalog-item__buy" #="#">В корзину</a>
+                        <a class="catalog-item__buy" href="#">В корзину</a>
                         <a class="catalog-item__compare" href="#">Добавить к сравнению</a>
                     </p>
                 </li>    
@@ -133,14 +173,16 @@
         </a> 
         <!-- Адрес (элемент блока footer) -->
         <p class="footer__text">г. Москва, ул. Строителей, 15 </p>
-        <!-- Карточка пользователя (независимый блок с модификатором) -->
-        <ul class="user-account user-account_footer ">
-            <li><button type="button">Войти</button></li>
-        </ul> 
+        <!-- Раздел пользователя (независимый блок с модификаторами ) -->
+        <ul class="user-account user-account_footer user-account_logout">
+            <li class="user-account-list">
+                <a class="user-account-button" href="login.html" aria-label="Кнопка входа в личный кабинет">Войти</a>
+            </li>
+        </ul>
         <!-- Раздел "Сравнить" (независимый блок с модификатором) -->
-        <a class="compare-button compare-button_footer" href="#">Сравнить</a>
+        <a class="compare-button compare-button_footer" href="#" aria-label="Раздел сравнения выбранных товаров">Сравнить</a>
         <!-- Корзина (независимый блок с модификатором) -->
-        <a class="basket basket_footer" href="#">Корзина</a>
+        <a class="basket basket_footer" href="#" aria-label="Вход в корзину покупок">Корзина</a>
         <!-- Навигация (независимый блок с модификатором)-->
         <ul class="navigation-list navigation-list_footer">
             <li class="navigation-list__item"><a class="navigation-list__link" href="#">Доставка</a></li>
@@ -152,12 +194,12 @@
             <a href="tel: +74959595">Тел.: +7 (495) 495-95-95</a></p>
         <!-- Соц. сети (независимый блок) -->
         <ul class="socials">
-            <li class="socials__item"><a class="socials__link" href="#">Фейсбук</a></li>
-            <li class="socials__item"><a class="socials__link" href="#">Инстаграм</a></li>
-            <li class="socials__item"><a class="socials__link" href="#">Твиттер</a></li>
+            <li class="socials__item"><a class="socials__link" href="#" aria-label="Магазин «Device» на Фейсбуке"></a></li>
+            <li class="socials__item"><a class="socials__link" href="#" aria-label="Магазин «Device» во Вконтакте"></a></li>
+            <li class="socials__item"><a class="socials__link" href="#" aria-label="Магазин «Device» в Твиттере"></a></li>
         </ul>
         <!-- Copyright (элемент блока footer) -->
-        <a class="footer__copyright" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
+        <a class="footer__copyright" href="https://htmlacademy.ru/intensive/htmlcss" aria-label="HTML Academy"></a>
     </footer>
 </body>
 </html>
