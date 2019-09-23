@@ -13,7 +13,7 @@
       <!-- Блок с навигацией -->
       <nav class="navigation">
         <!-- Логотип -->
-        <a class="logo" href="index.html">
+        <a class="logo logo_header" href="index.html">
             <img src="img/logo-device.svg" width="164" height="36" alt="Логотип интернет-магазина «Device»">
         </a>  
         <div class="user-navigation-wrapper">
@@ -24,7 +24,7 @@
             <button class="search__button" type="submit" aria-label="Кнопка поиска по сайту">Найти</button>
           </form>
           <!-- Раздел пользователя -->
-          <ul class="user-account user-account_logout">
+          <ul class="user-account user-account_header user-account_logout">
             <li class="user-account-list">
               <a class="user-account-button" href="login.html" aria-label="Кнопка входа в личный кабинет">Войти</a>
             </li>
@@ -36,19 +36,25 @@
         </div>
         <!-- Основная навигация (независимый блок navigation-list с другим независимым блоком выпадающего списка navigation-list__list внутри) -->
         <ul class="navigation-list">
-          <li class="navigation-list__item"><a class="navigation-list__link" href="#">Каталог товаров</a>
-            <ul class="navigation-list__inner-list catalog-menu" >
-              <li class="catalog-menu__item"><a class="catalog-menu__link" href="#">Виртуальная реальность </a></li>
-              <li class="catalog-menu__item"><a class="catalog-menu__link" href="catalog.html">Моноподы для селфи </a></li>
-              <li class="catalog-menu__item"><a class="catalog-menu__link" href="#">Экшн-камеры </a></li>
-              <li class="catalog-menu__item"><a class="catalog-menu__link" href="#">Фитнес-браслеты </a></li>
-              <li class="catalog-menu__item"><a class="catalog-menu__link" href="#">Умные часы </a></li>
-              <li class="catalog-menu__item"><a class="catalog-menu__link" href="#">Квадрокоптеры</a></li>
+          <li class="navigation-list__item navigation-list__item_header"><a class="navigation-list__link" href="#">Каталог товаров</a>
+            <ul class="navigation-list__inner-list catalog-menu">
+              <li class="catalog-menu__column">
+                <a class="catalog-menu__link" href="#">Виртуальная реальность </a>
+                <a class="catalog-menu__link" href="catalog.html">Моноподы для селфи </a>
+                <a class="catalog-menu__link" href="#">Экшн-камеры </a>
+              </li>
+              <li class="catalog-menu__column">
+                <a class="catalog-menu__link" href="#">Фитнес-браслеты </a>
+              <a class="catalog-menu__link" href="#">Умные часы </a>
+              </li>
+              <li class="catalog-menu__column">
+                <a class="catalog-menu__link" href="#">Квадрокоптеры</a>
+              </li>
             </ul>
           </li>
-          <li class="navigation-list__item"><a class="navigation-list__link" href="#">Доставка</a></li>
-          <li class="navigation-list__item"><a class="navigation-list__link" href="#">Гарантия</a></li>
-          <li class="navigation-list__item"><a class="navigation-list__link" href="#">Контакты</a></li>
+          <li class="navigation-list__item navigation-list__item_header"><a class="navigation-list__link" href="#">Доставка</a></li>
+          <li class="navigation-list__item navigation-list__item_header"><a class="navigation-list__link" href="#">Гарантия</a></li>
+          <li class="navigation-list__item navigation-list__item_header"><a class="navigation-list__link" href="#">Контакты</a></li>
         </ul>
       </nav>
     </header>
@@ -82,8 +88,6 @@
                 <dt class="promo-item-features__title">Материал</dt>
                 <dd class="promo-item-features__description">Карбон</dd>
             </dl>
-          
-          
           </li>
           <!-- Слайдер 2 -->
           <li class="promo-slider__item promo-item">
@@ -225,62 +229,82 @@
       </section>
 
       <!-- Информация о магазине -->
-      <section class="shop-information">
+      <div class="section-wrapper">
+        <section class="shop-information">
           <h2 class="shop-information__title">О нас</h2>
-          <p class="shop-information__text">Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас. </p>
-          <p class="shop-information__text">Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями: </p>
-            <ul class="shop-information__list">
-              <li class="shop-information__item"><a class="shop-information__link" href="#">Деловые Линии</a></li>
-              <li class="shop-information__item"><a class="shop-information__link" href="#">Автотрейдинг </a></li>
-              <li class="shop-information__item"><a class="shop-information__link" href="#">ЖелДорЭкспедиция</a></li>
-            </ul>
+          <p class="shop-information__text">Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас. 
+          </p>
+          <p class="shop-information__text">Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со
+            многими транспортными компаниями: </p>
+          <ul class="shop-information__list">
+            <li class="shop-information__item"><a class="shop-information__link" href="#">Деловые Линии</a></li>
+            <li class="shop-information__item"><a class="shop-information__link" href="#">Автотрейдинг </a></li>
+            <li class="shop-information__item"><a class="shop-information__link" href="#">ЖелДорЭкспедиция</a></li>
+          </ul>
           <a class="button shop-information__button" href="#">Подробнее о нас</a>
-      </section>
-
-      <!-- Контакты офиса -->
-      <section class="contacts">
-        <h2 class="contacts__title">Контакты</h2>
-        <p class="contacts__text">Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
-        <a class="contacts__link" href="#"><img class="contacts__image" src="img/map.jpg" width="560" height="222" alt="Офис компании по адресу: улица Строителей, дом 15"></a>
-        <a class="button contacts__button" href="#">Напишите нам</a>
-      </section>
+        </section>
+        
+        <!-- Контакты офиса -->
+        <section class="contacts">
+          <h2 class="contacts__title">Контакты</h2>
+          <p class="contacts__text">Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить
+            работоспособность покупки. Всякое бывает.</p>
+          <a class="contacts__link" href="#"><img class="contacts__image" src="img/map.jpg" width="560" height="222"
+              alt="Офис компании по адресу: улица Строителей, дом 15"></a>
+          <a class="button contacts__button" href="#">Напишите нам</a>
+        </section>
+      </div>
     </main>
     
     <!-- Подвал сайта -->
     <footer class="footer">
-      <!-- Логотип -->
-      <a class="logo" href="index.html">
+      <div class="footer-inner">
+        <!-- Логотип -->
+        <a class="logo logo_footer" href="index.html">
           <img src="img/logo-device-yellow.svg" width="164" height="36" alt="Логотип интернет-магазина «Device»">
-      </a> 
-      <!-- Адрес (элемент блока footer) -->
-      <p class="footer__text">г. Москва, ул. Строителей, 15 </p>
-      <!-- Раздел пользователя -->
-      <ul class="user-account user-account_logout">
-        <li class="user-account-list">
-          <a class="user-account-button user-account-button_footer_color" href="login.html" aria-label="Кнопка входа в личный кабинет">Войти</a>
-        </li>
-      </ul>
-      <!-- Раздел "Сравнить" (независимый блок с модификатором) -->
-      <a class="compare-button compare-button_footer_color" href="#" aria-label="Раздел сравнения выбранных товаров">Сравнить</a>
-      <!-- Корзина (независимый блок с модификатором) -->
-      <a class="basket basket_footer_color" href="#" aria-label="Вход в корзину покупок">Корзина</a>
-      <!-- Навигация -->
-      <ul class="navigation-list">
-        <li class="navigation-list__item"><a class="navigation-list__link navigation-list__link_footer_color" href="#">Доставка</a></li>
-        <li class="navigation-list__item"><a class="navigation-list__link navigation-list__link_footer_color" href="#">Гарантия</a></li>
-        <li class="navigation-list__item"><a class="navigation-list__link navigation-list__link_footer_color" href="#">Контакты</a></li>
-      </ul>
-      <!-- Телефон (элемент блока footer) -->
-      <p class="footer__text">
-        <a class="footer__tel-link" href="tel: +74959595">Тел.: +7 (495) 495-95-95</a></p>
-      <!-- Соц. сети (независимый блок) -->
-      <ul class="socials">
-          <li class="socials__item"><a class="socials__link socials__link-fb" href="#" aria-label="Магазин «Device» на Фейсбуке"></a></li>
-          <li class="socials__item"><a class="socials__link socials__link-instagram" href="#" aria-label="Магазин «Device» во Вконтакте"></a></li>
-          <li class="socials__item"><a class="socials__link socials__link-twitter" href="#" aria-label="Магазин «Device» в Твиттере"></a></li>
-      </ul>
-      <!-- Copyright (элемент блока footer) -->
-      <a class="footer__copyright" href="https://htmlacademy.ru/intensive/htmlcss" aria-label="HTML Academy"></a>
+        </a>
+        <!-- Раздел пользователя -->
+        <ul class="user-account user-account_footer user-account_logout">
+          <li class="user-account-list">
+            <a class="user-account-button user-account-button_footer_color" href="login.html"
+              aria-label="Кнопка входа в личный кабинет">Войти</a>
+          </li>
+        </ul>
+        <!-- Раздел "Сравнить" (независимый блок с модификатором) -->
+        <a class="compare-button compare-button_footer_color" href="#" aria-label="Раздел сравнения выбранных товаров">Сравнить</a>
+        <!-- Корзина (независимый блок с модификатором) -->
+        <a class="basket basket_footer_color" href="#" aria-label="Вход в корзину покупок">Корзина</a>
+      </div>
+      <div class="footer-inner">
+        <!-- Адрес (элемент блока footer) -->
+        <p class="footer__text">г. Москва, ул. Строителей, 15 </p>
+        <!-- Навигация -->
+        <ul class="navigation-list navigation-list_footer">
+          <li class="navigation-list__item navigation-list__item_footer"><a class="navigation-list__link navigation-list__link_footer_color"
+              href="#">Доставка</a></li>
+          <li class="navigation-list__item navigation-list__item_footer"><a class="navigation-list__link navigation-list__link_footer_color"
+              href="#">Гарантия</a></li>
+          <li class="navigation-list__item navigation-list__item_footer"><a class="navigation-list__link navigation-list__link_footer_color"
+              href="#">Контакты</a></li>
+        </ul> 
+        <!-- Телефон (элемент блока footer) -->
+        <p class="footer__text">
+          <a class="footer__tel-link" href="tel: +74959595">Тел.: +7 (495) 495-95-95</a>
+        </p>
+      </div>
+      <div class="footer-inner">
+        <!-- Соц. сети (независимый блок) -->
+        <ul class="socials">
+          <li class="socials__item"><a class="socials__link socials__link-fb" href="#"
+              aria-label="Магазин «Device» на Фейсбуке"></a></li>
+          <li class="socials__item"><a class="socials__link socials__link-instagram" href="#"
+              aria-label="Магазин «Device» во Вконтакте"></a></li>
+          <li class="socials__item"><a class="socials__link socials__link-twitter" href="#"
+              aria-label="Магазин «Device» в Твиттере"></a></li>
+        </ul>
+        <!-- Copyright (элемент блока footer) -->
+        <a class="footer__copyright" href="https://htmlacademy.ru/intensive/htmlcss" aria-label="HTML Academy"></a>
+      </div>
     </footer>
 
     <!-- Модальное окно формы обратной связи -->
@@ -308,4 +332,4 @@
         <button class="map-modal__button" type="button" aria-label="Кнопка «Закрыть модальное окно карты»"></button>
     </section> 
   </body>
-</html>
+</html> 
