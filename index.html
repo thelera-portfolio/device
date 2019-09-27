@@ -67,57 +67,73 @@
       <!-- Промо-слайдер с товарами -->
       <section class="promo-slider">
         <h2 class="promo-slider__title visually-hidden">Промо-слайдер с товарами</h2>
+        <!-- Кнопки навигации по слайдерам -->
+        <input class="visually-hidden" type="radio" id="product-1" name="toggle" checked>
+        <input class="visually-hidden" type="radio" id="product-2" name="toggle">
+        <input class="visually-hidden" type="radio" id="product-3" name="toggle">
+
+        <div class="promo-slider__controls">
+          <label class="promo-slider__label" for="product-1" aria-label="Первый"></label>
+          <label class="promo-slider__label" for="product-2" aria-label="Второй"></label>
+          <label class="promo-slider__label" for="product-3" aria-label="Третий"></label> 
+        </div>
         <ul class="promo-slider__list">
           <!-- Слайдер 1 -->
-          <li class="promo-slider__item promo-item">
-            <h3 class="promo-item__title">Делай селфи,  как Бен Стиллер!</h3>
-            <img class="promo-item__product-img" src="img/slider-1.jpg" width="384" height="486" alt="Самая длинная палка для селфи">
+          <li class="promo-slider__item promo-item" id="promo-slide-1">
+            <h3 class="promo-item__title">Делай селфи,<br> как Бен Стиллер!</h3>
+            <img class="promo-item__product-img" src="img/slider-1.png" width="384" height="486" alt="Самая длинная палка для селфи">
             <p class="promo-item__text">Самая длинная палка для селфи доступна в нашем магазине. <br>Восемь (Восемь, Карл!) метров длиной и весом всего 5
             килограмм. </p>
             <!-- Кнопка "Подробнее"-->
             <a class="button promo-item__more-btn" href="#">Подробнее</a>
-            <!-- Кнопки навигации по слайдерам -->
             <!-- Основные преимущества товара на слайдере -->
             <dl class="promo-item__features promo-item-features">
+              <div class="promo-item-features__wrapper">
                 <dt class="promo-item-features__title">Длина палки</dt>
                 <dd class="promo-item-features__description">8,5 м</dd>
-
+              </div>
+              <div class="promo-item-features__wrapper">
                 <dt class="promo-item-features__title">Вес палки</dt>
                 <dd class="promo-item-features__description">5 кг</dd>
-
+              </div>  
+              <div class="promo-item-features__wrapper">
                 <dt class="promo-item-features__title">Материал</dt>
                 <dd class="promo-item-features__description">Карбон</dd>
+              </div>
             </dl>
           </li>
           <!-- Слайдер 2 -->
-          <li class="promo-slider__item promo-item">
-            <h3 class="promo-item__title">Худеем  правильно!</h3>
-            <img class="promo-item__product-img" src="img/slider-2.jpg" width="345" height="485" alt="Мотивирующие фитнес-браслеты">
-            <p class="promo-item__text">Мотивирующие фитнес-браслеты помогут найти в себе силы  не пропускать занятия и соблюдать диету.</p>
+          <li class="promo-slider__item promo-item" id="promo-slide-2">
+            <h3 class="promo-item__title">Худеем <br>правильно!</h3>
+            <img class="promo-item__product-img" src="img/slider-2.png" width="345" height="485" alt="Мотивирующие фитнес-браслеты">
+            <p class="promo-item__text">Мотивирующие фитнес-браслеты помогут найти в себе силы<br>не пропускать занятия и соблюдать диету.</p>
             <!-- Кнопка "Подробнее"-->
             <a class="button promo-item__more-btn" href="#">Подробнее</a>
-            <!-- Кнопки навигации по слайдерам -->
             <!-- Основные преимущества товара на слайдере -->
             <dl class="promo-item__features promo-item-features">
+              <div class="promo-item-features__wrapper">
                 <dt class="promo-item-features__title">Без подзарядки</dt>
                 <dd class="promo-item-features__description">48 часов</dd>
+              </div>
             </dl>
           </li>
           <!-- Слайдер 3 -->
-          <li class="promo-slider__item promo-item">
+          <li class="promo-slider__item promo-item" id="promo-slide-3">
             <h3 class="promo-item__title">Порхает как бабочка,  жалит как пчела!</h3>
-            <img class="promo-item__product-img" src="img/slider-3.jpg" width="526" height="334" alt="Квадрокоптер с мощным лазером">
-            <p class="promo-item__text">Этот обычный, на первый взгляд, квадрокоптер оснащен  мощным лазером, замаскированным под стандартную камеру. </p>
+            <img class="promo-item__product-img" src="img/slider-3.png" width="526" height="334" alt="Квадрокоптер с мощным лазером">
+            <p class="promo-item__text">Этот обычный, на первый взгляд, квадрокоптер оснащен<br> мощным лазером, замаскированным под стандартную камеру. </p>
             <!-- Кнопка "Подробнее"-->
             <a class="button promo-item__more-btn" href="#">Подробнее</a>
-            <!-- Кнопки навигации по слайдерам -->
             <!-- Основные преимущества товара на слайдере -->
             <dl class="promo-item__features promo-item-features">
+              <div class="promo-item-features__wrapper">
                 <dt class="promo-item-features__title">Дальность полета</dt>
                 <dd class="promo-item-features__description">800 м</dd>
-
+            </div>
+            <div class="promo-item-features__wrapper">
                 <dt class="promo-item-features__title">Радиус поражения</dt>
                 <dd class="promo-item-features__description">50 м</dd>
+            </div>
             </dl>
           </li>
         </ul>
@@ -135,7 +151,7 @@
           </li>
           <li class="popular__item popular-item">
             <a class="popular-item__link" href="#">
-              <h3 class="popular-item__title">Моноподы для селфи</h3>
+              <h3 class="popular-item__title">Моноподы<br>для селфи</h3>
               <!-- Картинка будет  реализована с помощью css -->
             </a>
           </li>
@@ -170,32 +186,33 @@
       <section class="services-slider">
         <div class="services-slider-container">
           <h2 class="services-slider__title visually-hidden">Слайдер с преимуществами компании</h2>
-          <ul class="services-slider__menu services-slider-menu">
-            <li class="services-slider-menu__item"><a class="button button_services-size services-slider-menu__link" href="#">Доставка</a></li>
-            <li class="services-slider-menu__item"><a class="button button_services-size services-slider-menu__link" href="#">Гарантия</a></li>
-            <li class="services-slider-menu__item"><a class="button button_services-size services-slider-menu__link" href="#">Кредит</a></li>
-          </ul>
+          <!-- Кнопки в левом блоке слайдера-->
+          <input class="services-slider__input visually-hidden" type="radio" id="value-1" name="values" checked>
+          <input class="services-slider__input visually-hidden" type="radio" id="value-2" name="values">
+          <input class="services-slider__input visually-hidden" type="radio" id="value-3" name="values">
+          <div class="services-slider__menu services-slider-menu"> 
+            <label class="services-slider__label button button_services-size button_services-active" for="value-1" aria-label="Доставка">Доставка</label>
+            <label class="services-slider__label button button_services-size button_services-active" for="value-2" aria-label="Гарантия">Гарантия</label>
+            <label class="services-slider__label button button_services-size button_services-active" for="value-3" aria-label="Кредит">Кредит</label>
+          </div>
           <ul class="services-slider__list">
             <!-- Слайдер "Доставка" -->
             <li class="services-slider__item services-slider-item">
               <h3 class="services-slider-item__title">Доставка</h3>
               <p class="services-slider-item__text">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно
-                бесплатно! Ведь мы неплохо заработаем, поднимая
-                его на ваш этаж.</p>
+                бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
             </li>
             <!-- Слайдер "Гарантия" -->
             <li class="services-slider__item services-slider-item">
               <h3 class="services-slider-item__title">Гарантия</h3>
               <p class="services-slider-item__text">Если из-за возгорания купленного у нас товара у вас сгорит дом — не
-                переживайте, мы выдадим вам новый. Товар, не дом,
-                конечно же.</p>
+                переживайте, мы выдадим вам новый. <br>Товар, не дом, конечно же.</p>
             </li>
             <!-- Слайдер "Кредит" -->
             <li class="services-slider__item services-slider-item">
               <h3 class="services-slider-item__title">Кредит</h3>
               <p class="services-slider-item__text">Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас
-                наиболее выгодные  условия кредита. Выгодные
-                для нашего банка, разумеется.</p>
+                наиболее выгодные<br> условия кредита. Выгодные для нашего банка, разумеется.</p>
             </li>
           </ul>
         </div>
@@ -311,25 +328,27 @@
     <section class="write-message-modal">
         <h2 class="write-message-modal__title visually-hidden">Форма обратной связи</h2>
         <form class="write-message-modal__form write-message-modal-form" action="https://echo.htmlacademy.ru" method="POST">
-          <label class="write-message-modal-form__label" for="user-name-field">Ваше имя:</label>
-          <input class="write-message-modal-form__input" type="text" name="user-name" id="user-name-field" placeholder="Имя Фамилия">
-
-          <label class="write-message-modal-form__label" for="user-email-field">Ваш e-mail:</label>
-          <input class="write-message-modal-form__input" type="text" name="user-name" id="user-email-field" placeholder="email@example.com">
-
-          <label class="write-message-modal-form__label" for="text-field">Текст письма:</label>
-          <textarea class="write-message-modal-form__text-input" name="text" id="text-field">В свободной форме</textarea>
-
+          <div class="write-message-modal-form__wrapper">
+            <label class="write-message-modal-form__label">Ваше имя:
+              <input class="write-message-modal-form__input" type="text" name="user-name" placeholder="Имя Фамилия">
+            </label>
+            <label class="write-message-modal-form__label">Ваш e-mail:
+              <input class="write-message-modal-form__input write-message-modal-form__input_email-input" type="text" name="user-name" placeholder="email@example.com">
+            </label>
+          </div>  
+          <label class="write-message-modal-form__label">Текст письма:
+            <textarea class="write-message-modal-form__text-input" name="text">В свободной форме</textarea>
+          </label>
           <button class="button button_modal-size write-message-modal-form__button" type="submit">Отправить</button>
         </form>
-        <button class="write-message-modal__button" type="button" aria-label="Кнопка «Закрыть окно формы обратной связи»"></button>
+        <button class="modal-close-button modal-close-button_write-message-position" type="button" aria-label="Кнопка «Закрыть окно формы обратной связи»"></button>
     </section> 
 
     <!-- Модальное окно карты -->
     <section class="map-modal">
         <h2 class="map-modal__title visually-hidden">Как до нас добраться?</h2>
-        <img src="img/map-big.jpg" alt="Офис компании по адресу ул. Строителей, дом 15" width="960" height="559">
-        <button class="map-modal__button" type="button" aria-label="Кнопка «Закрыть модальное окно карты»"></button>
+        <img class="map-modal__img" src="img/map-big.jpg" alt="Офис компании по адресу ул. Строителей, дом 15" width="960" height="559">
+        <button class="modal-close-button modal-close-button_map-position" type="button" aria-label="Кнопка «Закрыть модальное окно карты»"></button>
     </section> 
   </body>
 </html> 
