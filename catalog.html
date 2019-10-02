@@ -13,7 +13,7 @@
             <!-- Блок с навигацией -->
             <nav class="navigation">
                 <!-- Логотип -->
-                <a class="logo logo_header" href="index.html">
+                <a class="logo" href="index.html">
                     <img src="img/logo-device.svg" width="164" height="36" alt="Логотип интернет-магазина «Device»">
                 </a>
                 <div class="user-navigation-wrapper">
@@ -138,7 +138,7 @@
                         <a class="catalog-sort__link" href="#" aria-label="Сортировать по возрастанию"></a>
                         <a class="catalog-sort__link" href="#" aria-label="Сортировать по убыванию"></a>
                     </section>
-                
+            
                     <!-- Раздел с товарами -->
                     <section class="catalog">
                         <h2 class="catalog__title visually-hidden">Список моноподов</h2>
@@ -220,53 +220,55 @@
         </main>
         <!-- Подвал сайта -->
         <footer class="footer">
-            <div class="footer-inner">
-                <!-- Логотип -->
-                <a class="logo logo_footer" href="index.html">
-                    <img src="img/logo-device-yellow.svg" width="164" height="36" alt="Логотип интернет-магазина «Device»">
-                </a>
-                <!-- Раздел пользователя -->
-                <ul class="user-account user-account_footer user-account_logout">
-                    <li class="user-account-list">
-                        <a class="user-account-button user-account-button_footer_color" href="login.html"
-                            aria-label="Кнопка входа в личный кабинет">Войти</a>
-                    </li>
-                </ul>
-                <!-- Раздел "Сравнить" (независимый блок с модификатором) -->
-                <a class="compare-button compare-button_footer_color" href="#"
-                    aria-label="Раздел сравнения выбранных товаров">Сравнить</a>
-                <!-- Корзина (независимый блок с модификатором) -->
-                <a class="basket basket_footer_color" href="#" aria-label="Вход в корзину покупок">Корзина</a>
-            </div>
-            <div class="footer-inner">
-                <!-- Адрес (элемент блока footer) -->
-                <p class="footer__text">г. Москва, ул. Строителей, 15 </p>
-                <!-- Навигация -->
-                <ul class="navigation-list navigation-list_footer">
-                    <li class="navigation-list__item navigation-list__item_footer"><a
-                            class="navigation-list__link navigation-list__link_footer_color" href="#">Доставка</a></li>
-                    <li class="navigation-list__item navigation-list__item_footer"><a
-                            class="navigation-list__link navigation-list__link_footer_color" href="#">Гарантия</a></li>
-                    <li class="navigation-list__item navigation-list__item_footer"><a
-                            class="navigation-list__link navigation-list__link_footer_color" href="#">Контакты</a></li>
-                </ul>
-                <!-- Телефон (элемент блока footer) -->
-                <p class="footer__text">
-                    <a class="footer__tel-link" href="tel: +74959595">Тел.: +7 (495) 495-95-95</a>
-                </p>
-            </div>
-            <div class="footer-inner">
-                <!-- Соц. сети (независимый блок) -->
-                <ul class="socials">
-                    <li class="socials__item"><a class="socials__link socials__link-fb" href="#"
-                            aria-label="Магазин «Device» на Фейсбуке"></a></li>
-                    <li class="socials__item"><a class="socials__link socials__link-instagram" href="#"
-                            aria-label="Магазин «Device» во Вконтакте"></a></li>
-                    <li class="socials__item"><a class="socials__link socials__link-twitter" href="#"
-                            aria-label="Магазин «Device» в Твиттере"></a></li>
-                </ul>
-                <!-- Copyright (элемент блока footer) -->
-                <a class="footer__copyright" href="https://htmlacademy.ru/intensive/htmlcss" aria-label="HTML Academy"></a>
+            <div class="footer-container">
+                <div class="footer-inner">
+                    <!-- Логотип -->
+                    <a class="logo" href="index.html">
+                        <img src="img/logo-device-yellow.svg" width="164" height="36" alt="Логотип интернет-магазина «Device»">
+                    </a>
+                    <!-- Раздел пользователя -->
+                    <ul class="user-account user-account_footer user-account_logout">
+                        <li class="user-account-list">
+                            <a class="user-account-button user-account-button_footer_color" href="login.html"
+                                aria-label="Кнопка входа в личный кабинет">Войти</a>
+                        </li>
+                    </ul>
+                    <!-- Раздел "Сравнить" (независимый блок с модификатором) -->
+                    <a class="compare-button compare-button_footer_color" href="#"
+                        aria-label="Раздел сравнения выбранных товаров">Сравнить</a>
+                    <!-- Корзина (независимый блок с модификатором) -->
+                    <a class="basket basket_footer_color" href="#" aria-label="Вход в корзину покупок">Корзина</a>
+                </div>
+                <div class="footer-inner">
+                    <!-- Адрес (элемент блока footer) -->
+                    <p class="footer__text">г. Москва, ул. Строителей, 15 </p>
+                    <!-- Навигация -->
+                    <ul class="navigation-list navigation-list_footer">
+                        <li class="navigation-list__item navigation-list__item_footer"><a
+                                class="navigation-list__link navigation-list__link_footer_color" href="#">Доставка</a></li>
+                        <li class="navigation-list__item navigation-list__item_footer"><a
+                                class="navigation-list__link navigation-list__link_footer_color" href="#">Гарантия</a></li>
+                        <li class="navigation-list__item navigation-list__item_footer"><a
+                                class="navigation-list__link navigation-list__link_footer_color" href="#">Контакты</a></li>
+                    </ul>
+                    <!-- Телефон (элемент блока footer) -->
+                    <p class="footer__text">
+                        <a class="footer__tel-link" href="tel: +74959595">Тел.: +7 (495) 495-95-95</a>
+                    </p>
+                </div>
+                <div class="footer-inner">
+                    <!-- Соц. сети (независимый блок) -->
+                    <ul class="socials">
+                        <li class="socials__item"><a class="socials__link socials__link-fb" href="#"
+                                aria-label="Магазин «Device» на Фейсбуке"></a></li>
+                        <li class="socials__item"><a class="socials__link socials__link-instagram" href="#"
+                                aria-label="Магазин «Device» во Вконтакте"></a></li>
+                        <li class="socials__item"><a class="socials__link socials__link-twitter" href="#"
+                                aria-label="Магазин «Device» в Твиттере"></a></li>
+                    </ul>
+                    <!-- Copyright (элемент блока footer) -->
+                    <a class="footer__copyright" href="https://htmlacademy.ru/intensive/htmlcss" aria-label="HTML Academy"></a>
+                </div>
             </div>
         </footer>
     </body>
