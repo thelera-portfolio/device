@@ -1187,18 +1187,12 @@
   box-sizing: border-box;
   padding-top: 14px;
   padding-left: 20px;
+
+  resize: none;
 }
 
 .write-message-modal-form__input {
   padding-left: 20px;
-}
-
-.write-message-modal-form__input_email-input::placeholder {
-  color: rgba(70, 70, 70, 0.4);
-  font-family: 'Gilroy', 'Arial', sans-serif;
-  font-size: 14px;
-  font-weight: 800;
-  line-height: 18px;
 }
 
 .write-message-modal-form__wrapper {
@@ -1339,12 +1333,15 @@
 }
 
 .catalog-sort {
+  background-color: rgba(0, 0, 0 , 0.08);
+}
+
+.catalog-sort__container {
   box-sizing: border-box;
   display: flex;
   align-items: center;
   padding-left: 73px;
-
-  background-color: rgba(0, 0, 0 , 0.08);
+  width: 832px;
 }
 
 .catalog-sort__link {
@@ -1355,16 +1352,16 @@
   line-height: 18px;
 }
 
-.catalog-sort__link:first-child {
-  margin-left: 55px;
-}
-
 .catalog-sort__link:nth-of-type(1) {
   margin-left: 55px;
 }
 
-.catalog-sort__link_active {
-  color: #000000;
+.catalog-sort__link:nth-last-of-type(2) {
+  margin-left: auto;
+}
+
+.catalog-sort__link:last-of-type {
+  margin-left: 19px;
 }
 
 .breadcrumbs__link:hover,
@@ -1374,9 +1371,48 @@
   color: rgba(0, 0, 0 ,0.6);
 }
 
-.breadcrumbs__link:active,
-.catalog-sort__link:active {
+.breadcrumbs__link:active {
   color: rgba(0, 0, 0 ,0.1);
+}
+
+.catalog-sort__link:active {
+  color: #000000;
+}
+
+.catalog-sort__link_up,
+.catalog-sort__link_down {
+  content: "";
+  
+  width: 0; 
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+}
+
+.catalog-sort__link_up {
+  border-bottom: 10px solid rgba(0, 0, 0 ,0.2);
+}
+
+.catalog-sort__link_down {
+  border-top: 10px solid rgba(0, 0, 0 ,0.2);
+}
+
+.catalog-sort__link_up:hover,
+.catalog-sort__link_down:hover {
+  border-top-color: rgba(0, 0, 0 ,0.4);
+  border-bottom-color: rgba(0, 0, 0 ,0.4);
+}
+
+.catalog-sort__link_up:active,
+.catalog-sort__link_down:active {
+  border-top-color: #000000;
+  border-bottom-color: #000000;
+}
+
+.catalog-sort__link_active {
+  color: #000000;
+  border-top-color: #000000;
+  border-bottom-color: #000000; 
 }
 
 /* Раздел с фильтрами */
@@ -1419,7 +1455,7 @@
 .catalog-columns:first-child {
   flex-grow: 1;
 
-  background-color: #efefef;
+  background-image: linear-gradient(#dbdbdb 70px, #efefef 70px) 
 }
 
 .catalog-columns:nth-child(2) {
@@ -1454,18 +1490,18 @@
 }
 
 .catalog-filters__title {
-  /* display: flex;
-  justify-content: flex-end; */
   padding-right: 178px;
-
-  background-color: #dbdbdb;
 }
 
 .catalog-filters-form__wrapper {
   position: relative;
 }
 
-.catalog-filters-form__label {
+/* Чекбокс */
+.catalog-filters-form__checkbox-label
+ {
+  position: relative;
+
   padding-left: 40px;
 
   color: #000000;
@@ -1474,10 +1510,13 @@
   cursor: pointer;
 }
 
-.catalog-filters-form__check-box {
+.catalog-filters-form__checkbox-label::before {
+  content: "";
+
   position: absolute;
-  top: 8px;
-  left: auto;
+  top: 0;
+  left: 0;
+
   width: 23px;
   height: 23px;
 
@@ -1486,48 +1525,23 @@
   background-position: 0 0;
 }
 
-.catalog-filters-form__input:hover {
+/* Радио-кнопка */
+.catalog-filters-form__radio-label {
+  position: relative;
+
+  padding-left: 40px;
+
+  color: #000000;
+  line-height: 39px;
+
   cursor: pointer;
 }
 
-.catalog-filters-form__input:checked ~ .catalog-filters-form__check-box {
-  width: 27px;
+.catalog-filters-form__radio-label::before {
+  content: "";
 
-  background-image: url("../img/checkbox-on.svg");
-}
-
-.catalog-filters-form__input:disabled ~ .catalog-filters-form__label,
-.catalog-filters-form__input:disabled ~ .catalog-filters-form__check-box,
-.catalog-filters-form__input:disabled ~ .catalog-filters-form__radio {
-  opacity: 0.25;
-
-  cursor: default;
-}
-
-.catalog-filters-form__input:checked:active ~ .catalog-filters-form__label,
-.catalog-filters-form__input:checked:active ~ .catalog-filters-form__check-box,
-.catalog-filters-form__input:checked:active ~ .catalog-filters-form__radio {
-  opacity: 1;
-}
-
-.catalog-filters-form__input:hover ~ .catalog-filters-form__label,
-/*.catalog-filters-form__input:focus ~ .catalog-filters-form__label,*/
-.catalog-filters-form__input:hover ~ .catalog-filters-form__check-box,
-/*.catalog-filters-form__input:focus ~ .catalog-filters-form__check-box,*/
-.catalog-filters-form__input:hover ~ .catalog-filters-form__radio/*,
-.catalog-filters-form__input:focus ~ .catalog-filters-form__radio*/ {
-  opacity: 0.6;
-}
-
-.catalog-filters-form__input:active ~ .catalog-filters-form__label,
-.catalog-filters-form__input:active ~ .catalog-filters-form__check-box,
-.catalog-filters-form__input:active ~ .catalog-filters-form__radio {
-  opacity: 1;
-}
-
-.catalog-filters-form__radio {
   position: absolute;
-  top: 8px;
+  top: -3px;
   left: 0;
 
   width: 25px;
@@ -1536,12 +1550,49 @@
   background-image: url("../img/radio-off.svg");
   background-repeat: no-repeat;
 }
-.catalog-filters-form__input:checked ~ .catalog-filters-form__radio {
+
+/* Checked */
+.catalog-filters-form__input:checked + .catalog-filters-form__checkbox-label::before {
+  width: 27px;
+
+  background-image: url("../img/checkbox-on.svg");
+}
+
+.catalog-filters-form__input:checked ~ .catalog-filters-form__radio-label::before {
   width: 25px;
   height: 25px;
 
   background-image: url("../img/radio-on.svg");
 }
+
+/* Hover */
+.catalog-filters-form__input:hover + .catalog-filters-form__checkbox-label,
+.catalog-filters-form__input:hover + .catalog-filters-form__radio-label {
+  opacity: 0.6;
+
+  cursor: pointer;
+}
+
+/* Active */
+.catalog-filters-form__input:checked:active + .catalog-filters-form__checkbox-label,
+.catalog-filters-form__input:checked:active + .catalog-filters-form__radio-label {
+  opacity: 1;
+}
+
+/* Disabled */
+.catalog-filters-form__input:disabled + .catalog-filters-form__checkbox-label,
+.catalog-filters-form__input:disabled + .catalog-filters-form__radio-label {
+  opacity: 0.25;
+
+  cursor: default;
+}
+
+/* Focused */
+.catalog-filters-form__input:focus + .catalog-filters-form__checkbox-label,
+.catalog-filters-form__input:focus + .catalog-filters-form__radio-label {
+  box-shadow: 0 0 5px 2px #4A90E2;
+}
+
 /* Раздел с товарами */
 .catalog {
   padding-top: 69px;
@@ -1684,12 +1735,9 @@
 .pagination {
   box-sizing: border-box;
   display: flex;
+  align-items: center;
   margin: 0;
   padding: 0;
-  padding-top: 24px;
-  padding-right: 30px;
-  padding-bottom: 24px;
-  padding-left: 30px;
   width: 760px;
 
   background-color: #ebebeb;
@@ -1724,6 +1772,14 @@
   line-height: 24px;
   text-decoration: none;
   text-transform: uppercase;
+}
+
+.pagination__link_back,
+.pagination__link_forward {
+  display: block;
+  padding: 23px 30px;
+
+  vertical-align: middle; 
 }
 
 .pagination__link_back:hover,

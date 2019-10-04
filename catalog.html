@@ -86,42 +86,35 @@
                             <fieldset class="catalog-filters__fieldset">
                                 <legend class="catalog-filters-form__legend">Цвет</legend>
                                 <div class="catalog-filters-form__wrapper">
-                                    <input class="catalog-filters-form__input visually-hidden" type="checkbox" id="filter-black-color" name="item-color" value="black-color" checked disabled>
-                                    <span class="catalog-filters-form__check-box"></span>
-                                    <label class="catalog-filters-form__label" for="filter-black-color">Черный</label>
+                                    <input class="catalog-filters-form__input visually-hidden" type="checkbox" id="filter-black-color" name="item-color" value="black-color" checked>
+                                    <label class="catalog-filters-form__checkbox-label" for="filter-black-color">Черный</label>
                                 </div>
                                 <div class="catalog-filters-form__wrapper">
                                     <input class="catalog-filters-form__input visually-hidden" type="checkbox" id="filter-white-color" name="item-color" value="white-color">
-                                    <span class="catalog-filters-form__check-box"></span>
-                                    <label class="catalog-filters-form__label" for="filter-white-color">Белый</label>
+                                    <label class="catalog-filters-form__checkbox-label" for="filter-white-color">Белый</label>
                                 </div>
                                 <div class="catalog-filters-form__wrapper">
                                     <input class="catalog-filters-form__input visually-hidden" type="checkbox" id="filter-blue-color" name="item-color" value="blue-color" checked>
-                                    <span class="catalog-filters-form__check-box"></span>
-                                    <label class="catalog-filters-form__label" for="filter-blue-color">Синий</label>
+                                    <label class="catalog-filters-form__checkbox-label" for="filter-blue-color">Синий</label>
                                 </div>
                                 <div class="catalog-filters-form__wrapper">
                                     <input class="catalog-filters-form__input visually-hidden" type="checkbox" id="filter-red-color" name="item-color" value="red-color" checked>
-                                    <span class="catalog-filters-form__check-box"></span>
-                                    <label class="catalog-filters-form__label" for="filter-red-color">Красный</label>
+                                    <label class="catalog-filters-form__checkbox-label" for="filter-red-color">Красный</label>
                                 </div>
                                 <div class="catalog-filters-form__wrapper">
-                                    <input class="catalog-filters-form__input visually-hidden" type="checkbox" id="filter-pink-color" name="item-color" value="pink-color">
-                                    <span class="catalog-filters-form__check-box"></span>
-                                    <label class="catalog-filters-form__label" for="filter-pink-color">Розовый</label>
+                                    <input class="catalog-filters-form__input visually-hidden" type="checkbox" id="filter-pink-color" name="item-color" value="pink-color" disabled>
+                                    <label class="catalog-filters-form__checkbox-label" for="filter-pink-color">Розовый</label>
                                 </div>
                             </fieldset>
                             <fieldset class="catalog-filters__fieldset">
                                 <legend class="catalog-filters-form__legend">Bluetooth</legend>
                                 <div class="catalog-filters-form__wrapper">
                                     <input class="catalog-filters-form__input visually-hidden" type="radio" id="filter-bluetooth-on" name="bluetooth" value="Есть" checked>
-                                    <span class="catalog-filters-form__radio"></span>
-                                    <label class="catalog-filters-form__label catalog-filters-form__label_radio" for="filter-bluetooth-on">Есть</label>
+                                    <label class="catalog-filters-form__radio-label" for="filter-bluetooth-on">Есть</label>
                                 </div>
                                 <div class="catalog-filters-form__wrapper">
                                     <input class="catalog-filters-form__input visually-hidden" type="radio" id="filter-bluetooth-off" name="bluetooth" value="Нет">
-                                    <span class="catalog-filters-form__radio"></span>
-                                    <label class="catalog-filters-form__label catalog-filters-form__label_radio" for="filter-bluetooth-off">Нет</label>
+                                    <label class="catalog-filters-form__radio-label" for="filter-bluetooth-off">Нет</label>
                                 </div>
                             </fieldset>
                             <button class="button" type="submit">Показать</button>
@@ -131,12 +124,14 @@
                 <div class="catalog-columns">
                     <!-- Раздел с сортировкой товаров -->
                     <section class="catalog-sort">
-                        <h2 class="catalog-sort__title">Сортировка:</h2>
-                        <a class="catalog-sort__link catalog-sort__link_active" href="#">По цене</a>
-                        <a class="catalog-sort__link" href="#">По типу</a>
-                        <a class="catalog-sort__link" href="#">По популярности</a>
-                        <a class="catalog-sort__link" href="#" aria-label="Сортировать по возрастанию"></a>
-                        <a class="catalog-sort__link" href="#" aria-label="Сортировать по убыванию"></a>
+                        <div class="catalog-sort__container">
+                            <h2 class="catalog-sort__title">Сортировка:</h2>
+                            <a class="catalog-sort__link catalog-sort__link_active" href="#">По цене</a>
+                            <a class="catalog-sort__link" href="#">По типу</a>
+                            <a class="catalog-sort__link" href="#">По популярности</a>
+                            <a class="catalog-sort__link catalog-sort__link_up" href="#" aria-label="Сортировать по возрастанию"></a>
+                            <a class="catalog-sort__link catalog-sort__link_down catalog-sort__link_active" href="#" aria-label="Сортировать по убыванию"></a>
+                        </div>
                     </section>
             
                     <!-- Раздел с товарами -->
