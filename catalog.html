@@ -13,33 +13,36 @@
             <!-- Блок с навигацией -->
             <nav class="navigation">
                 <!-- Логотип -->
-                <a class="logo" href="index.html">
+                <a class="logo navigation__logo"  href="index.html">
                     <img src="img/logo-device.svg" width="164" height="36" alt="Логотип интернет-магазина «Device»">
                 </a>
-                <div class="user-navigation-wrapper">
+                <!-- Навигация пользователя -->
+                <div class="user-navigation  navigation__user-navigation">
                     <!-- Поиск по сайту -->
-                    <form class="search-form" action="https://echo.htmlacademy.ru" method="GET">
+                    <form class="search-form user-navigation__search-form" action="https://echo.htmlacademy.ru" method="GET">
                         <label class="visually-hidden" for="search-field" aria-label="Поле поиска по сайту"></label>
                         <input class="search" type="text" id="search-field" name="search" placeholder="Поиск по сайту">
                         <button class="search__button" type="submit" aria-label="Кнопка поиска по сайту">Найти</button>
                     </form>
                     <!-- Раздел пользователя -->
-                    <ul class="user-account user-account_header user-account_logout">
-                        <li class="user-account-list">
-                            <a class="user-account-button" href="login.html"
-                                aria-label="Кнопка входа в личный кабинет">Войти</a>
+                    <ul class="user-account">
+                        <li class="user-account__list-item">
+                            <a class="user-account__link" href="user-profile.html" aria-label="Вход в личный кабинет">Валентин Петухов</a>
+                        </li>
+                        <li class="user-account__list-item">
+                            <a class="user-account__logout-button" href="login-out.html" aria-label="Выйти из личного кабинета">Выйти</a>
                         </li>
                     </ul>
                     <!-- Раздел "Сравнить" -->
-                    <a class="compare-button" href="#" aria-label="Раздел сравнения выбранных товаров">Сравнить</a>
+                    <a class="compare-button user-navigation__compare-button" href="#" aria-label="Раздел сравнения выбранных товаров">Сравнить</a>
                     <!-- Корзина -->
-                    <a class="basket" href="#" aria-label="Вход в корзину покупок">Корзина</a>
+                    <a class="basket user-navigation__basket" href="#" aria-label="Вход в корзину покупок">Корзина</a>
                 </div>
-                <!-- Основная навигация (независимый блок navigation-list с другим независимым блоком выпадающего списка navigation-list__list внутри) -->
-                <ul class="navigation-list">
-                    <li class="navigation-list__item navigation-list__item_header"><a class="navigation-list__link"
+                <!-- Основная навигация -->
+                <ul class="main-navigation">
+                    <li class="main-navigation__item"><a class="main-navigation__link"
                             href="#">Каталог товаров</a>
-                        <ul class="navigation-list__inner-list catalog-menu">
+                        <ul class="main-navigation__inner-list catalog-menu">
                             <li class="catalog-menu__column">
                                 <a class="catalog-menu__link" href="#">Виртуальная реальность </a>
                                 <a class="catalog-menu__link" href="catalog.html">Моноподы для селфи </a>
@@ -54,11 +57,11 @@
                             </li>
                         </ul>
                     </li>
-                    <li class="navigation-list__item navigation-list__item_header"><a class="navigation-list__link"
+                    <li class="main-navigation__item"><a class="main-navigation__link"
                             href="#">Доставка</a></li>
-                    <li class="navigation-list__item navigation-list__item_header"><a class="navigation-list__link"
+                    <li class="main-navigation__item"><a class="main-navigation__link"
                             href="#">Гарантия</a></li>
-                    <li class="navigation-list__item navigation-list__item_header"><a class="navigation-list__link"
+                    <li class="main-navigation__item"><a class="main-navigation__link"
                             href="#">Контакты</a></li>
                 </ul>
             </nav>
@@ -68,7 +71,7 @@
             <h1 class="main__title">Моноподы для селфи</h1>
 
             <!-- Хлебные крошки -->
-            <ul class="breadcrumbs">
+            <ul class="breadcrumbs main__breadcrumbs">
                 <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="index.html">Главная</a></li>
                 <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="catalog.html">Каталог товаров</a></li>
                 <li class="breadcrumbs__item breadcrumbs__item_current">Моноподы для селфи</li>
@@ -78,10 +81,11 @@
                     <!-- Раздел с фильтрами -->
                     <section class="catalog-filters">
                         <h2 class="catalog-filters__title">Фильтр:</h2>
-                        <form class="catalog-filters__form catalog-filters-form" action="https://echo.htmlacademy.ru" method="GET">
+                        <form class="catalog-filters-form" action="https://echo.htmlacademy.ru" method="GET">
                             <fieldset class="catalog-filters__fieldset">
                                 <legend class="catalog-filters-form__legend">Стоимость</legend>
-                                <input class="catalog-filters-form__range" type="range" name="item-price">
+                                <input class="catalog-filters-form__range visually-hidden" type="range" name="item-price">
+                                <span class="catalog-filters-form__custom-range"></span>
                             </fieldset>
                             <fieldset class="catalog-filters__fieldset">
                                 <legend class="catalog-filters-form__legend">Цвет</legend>
@@ -126,7 +130,7 @@
                     <section class="catalog-sort">
                         <div class="catalog-sort__container">
                             <h2 class="catalog-sort__title">Сортировка:</h2>
-                            <a class="catalog-sort__link catalog-sort__link_active" href="#">По цене</a>
+                            <a class="catalog-sort__link catalog-sort__link_active">По цене</a>
                             <a class="catalog-sort__link" href="#">По типу</a>
                             <a class="catalog-sort__link" href="#">По популярности</a>
                             <a class="catalog-sort__link catalog-sort__link_up" href="#" aria-label="Сортировать по возрастанию"></a>
@@ -135,11 +139,11 @@
                     </section>
             
                     <!-- Раздел с товарами -->
-                    <section class="catalog">
+                    <section class="catalog main__catalog">
                         <h2 class="catalog__title visually-hidden">Список моноподов</h2>
                         <ul class="catalog__list">
-                            <!-- Каждый товар в каталоге - отдельный блок -->
-                            <li class="catalog__item catalog-item">
+                            <!-- Каждый товар -->
+                            <li class="catalog-item">
                                 <div class="catalog-item__wrapper">
                                     <h3 class="catalog-item__title">
                                         <a class="catalog-item__link" href="#">Любительская селфи-палка</a>
@@ -154,7 +158,7 @@
                                     </p>
                                 </div>
                             </li>
-                            <li class="catalog__item catalog-item">
+                            <li class="catalog-item">
                                 <div class="catalog-item__wrapper">
                                     <h3 class="catalog-item__title">
                                         <a class="catalog-item__link" href="#">Профессиональная<br>селфи-палка</a>
@@ -169,7 +173,7 @@
                                     </p>
                                 </div>
                             </li>
-                            <li class="catalog__item catalog-item">
+                            <li class="catalog-item">
                                 <div class="catalog-item__wrapper">
                                     <h3 class="catalog-item__title">
                                         <a class="catalog-item__link" href="#">Непотопляемая селфи-палка</a>
@@ -185,10 +189,10 @@
                                 </div>
                             </li>
                             <!-- Товар с маркером NEW -->
-                            <li class="catalog__item catalog-item catalog-item_new">
+                            <li class="catalog-item catalog-item_new">
                                 <div class="catalog-item__wrapper">
                                     <h3 class="catalog-item__title">
-                                        <a class="catalog-item__link" href="#">Селфи-палка «Следуй за мной»</a>
+                                        <a class="catalog-item__link" href="#">Селфи-палка «Следуй за<br> мной»</a>
                                     </h3>
                                     <p class="catalog-item__price">4 900 руб.</p>
                                 </div>
@@ -215,45 +219,44 @@
         </main>
         <!-- Подвал сайта -->
         <footer class="footer">
-            <div class="footer-container">
-                <div class="footer-inner">
+            <div class="footer__container">
+                <div class="footer__inner">
                     <!-- Логотип -->
                     <a class="logo" href="index.html">
                         <img src="img/logo-device-yellow.svg" width="164" height="36" alt="Логотип интернет-магазина «Device»">
                     </a>
                     <!-- Раздел пользователя -->
-                    <ul class="user-account user-account_footer user-account_logout">
-                        <li class="user-account-list">
-                            <a class="user-account-button user-account-button_footer_color" href="login.html"
-                                aria-label="Кнопка входа в личный кабинет">Войти</a>
+                    <ul class="user-account footer__user-account">
+                        <li class="user-account__list-item">
+                            <a class="user-account__link user-account__link_footer-color" href="user-profile.html" aria-label="Вход в личный кабинет">Валентин Петухов</a>
+                        </li>
+                        <li class="user-account__list-item">
+                            <a class="user-account__logout-button user-account__logout-button_footer-color" href="login-out.html" aria-label="Выйти из личного кабинета">Выйти</a>
                         </li>
                     </ul>
                     <!-- Раздел "Сравнить" (независимый блок с модификатором) -->
-                    <a class="compare-button compare-button_footer_color" href="#"
+                    <a class="compare-button footer__compare-button compare-button_footer-color" href="#"
                         aria-label="Раздел сравнения выбранных товаров">Сравнить</a>
                     <!-- Корзина (независимый блок с модификатором) -->
-                    <a class="basket basket_footer_color" href="#" aria-label="Вход в корзину покупок">Корзина</a>
+                    <a class="basket footer__basket basket_footer-color" href="#" aria-label="Вход в корзину покупок">Корзина</a>
                 </div>
-                <div class="footer-inner">
+                <div class="footer__inner">
                     <!-- Адрес (элемент блока footer) -->
                     <p class="footer__text">г. Москва, ул. Строителей, 15 </p>
                     <!-- Навигация -->
-                    <ul class="navigation-list navigation-list_footer">
-                        <li class="navigation-list__item navigation-list__item_footer"><a
-                                class="navigation-list__link navigation-list__link_footer_color" href="#">Доставка</a></li>
-                        <li class="navigation-list__item navigation-list__item_footer"><a
-                                class="navigation-list__link navigation-list__link_footer_color" href="#">Гарантия</a></li>
-                        <li class="navigation-list__item navigation-list__item_footer"><a
-                                class="navigation-list__link navigation-list__link_footer_color" href="#">Контакты</a></li>
+                    <ul class="main-navigation footer__main-navigation">
+                        <li class="main-navigation__item_footer"><a class="main-navigation__link main-navigation__link_footer-color" href="#">Доставка</a></li>
+                        <li class="main-navigation__item_footer"><a class="main-navigation__link main-navigation__link_footer-color" href="#">Гарантия</a></li>
+                        <li class="main-navigation__item_footer"><a class="main-navigation__link main-navigation__link_footer-color" href="#">Контакты</a></li>
                     </ul>
                     <!-- Телефон (элемент блока footer) -->
                     <p class="footer__text">
-                        <a class="footer__tel-link" href="tel: +74959595">Тел.: +7 (495) 495-95-95</a>
+                        <a class="footer__tel-link" href="tel:+74959595">Тел.: +7 (495) 495-95-95</a>
                     </p>
                 </div>
-                <div class="footer-inner">
+                <div class="footer__inner">
                     <!-- Соц. сети (независимый блок) -->
-                    <ul class="socials">
+                    <ul class="socials footer__socials">
                         <li class="socials__item"><a class="socials__link socials__link-fb" href="#"
                                 aria-label="Магазин «Device» на Фейсбуке"></a></li>
                         <li class="socials__item"><a class="socials__link socials__link-instagram" href="#"
