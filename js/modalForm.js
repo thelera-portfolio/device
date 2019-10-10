@@ -50,6 +50,7 @@ modalForm.addEventListener("submit", function (evt) {
     modalLoginInput.setAttribute("required", true);
     modalEmailInput.setAttribute("required", true);
     modalTextInput.setAttribute("required", true);
+    
     writeMessageModal.classList.remove("modal-error");//и "трясём форму"
     writeMessageModal.offsetWidth = writeMessageModal.offsetWidth;
     writeMessageModal.classList.add("modal-error");
