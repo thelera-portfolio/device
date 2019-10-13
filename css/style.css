@@ -2,8 +2,8 @@
 @font-face {
   font-family: 'Gilroy';
   src: local('Gilroy Extra Bold'),
-       url('gilroyextrabold.woff') format('woff'),
-       url('gilroyextrabold.woff2') format('woff2');
+       url('../fonts/gilroyextrabold.woff') format('woff'),
+       url('../fonts/gilroyextrabold.woff2') format('woff2');
   font-weight: 800;
   font-style: normal;
 }
@@ -11,8 +11,8 @@
 @font-face {
   font-family: 'Gilroy';
   src: local('Gilroy Light'),
-       url('gilroylight.woff') format('woff'),
-       url('gilroylight.woff2') format('woff2');
+       url('../fonts/gilroylight.woff') format('woff'),
+       url('../fonts/gilroylight.woff2') format('woff2');
   font-weight: 300;
   font-style: normal;
 }
@@ -59,7 +59,6 @@ img {
   white-space: nowrap;
 
   -webkit-clip-path: inset(00%);
-
           clip-path: inset(00%);
   clip: rect(0 0 0 0);
   overflow: hidden;
@@ -122,9 +121,7 @@ img {
   height: 100%;
 
   -webkit-transition: all 0.5s;
-
   -o-transition: all 0.5s;
-
   transition: all 0.5s;
 }
 
@@ -140,7 +137,6 @@ img {
   width: 1160px;
 
   background-image: -o-linear-gradient(top, #ffffff 40px, #f7e296 40px);
-
   background-image: linear-gradient(to bottom, #ffffff 40px, #f7e296 40px);
 }
 
@@ -165,7 +161,6 @@ img {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  /*justify-content: flex-end; */
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -282,7 +277,6 @@ img {
   left: 356px;
 
   -webkit-box-sizing: border-box;
-
           box-sizing: border-box;
   width: 85px;
   height: 47px;
@@ -1013,7 +1007,6 @@ img {
   min-width: 1160px;
 
   background-image: -o-linear-gradient(top, #ffffff 102px, #e5e5e5 102px);
-
   background-image: linear-gradient(to bottom, #ffffff 102px, #e5e5e5 102px);
 }
 
@@ -1631,21 +1624,31 @@ img {
   height: 559px;
 
   -webkit-box-shadow: 0 10px 20px 0 rgba(4,6,6,0.20);
-
           box-shadow: 0 10px 20px 0 rgba(4,6,6,0.20);
+}
+
+.map-modal__inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+
+  margin: 0;
 }
 
 .map-show {
   display: block;
 
   -webkit-animation-name: bounce;
-
           animation-name: bounce;
   -webkit-animation-duration: 1s;
           animation-duration: 1s;
 }
 
 .map-modal__iframe {
+  position: relative;
+  z-index: 2;
+
   border: 0;
 }
 
@@ -1653,11 +1656,10 @@ img {
   position: absolute;
   top: 30px;
   right: 40px;
+  z-index: 3;
 
   padding: 0;
 }
-
-
 
 /* Каталог товаров */
 .main__title {
@@ -1743,6 +1745,8 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1889,7 +1893,6 @@ img {
           flex-grow: 1;
 
   background-image: -o-linear-gradient(#dbdbdb 70px, #efefef 70px);
-
   background-image: linear-gradient(#dbdbdb 70px, #efefef 70px) 
 }
 
@@ -2408,7 +2411,6 @@ img {
   margin-bottom: 15px;
 
   -ms-flex-wrap: wrap;
-
       flex-wrap: wrap;
 }
 

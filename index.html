@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>HTML Academy: Девайс</title>
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style-optimized.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400&display=swap&subset=cyrillic" rel="stylesheet">
   </head>
   <body>
@@ -346,11 +346,13 @@
     <section class="map-modal">
         <h2 class="map-modal__title visually-hidden">Как до нас добраться?</h2>
         <iframe class="map-modal__iframe" src="https://yandex.ru/map-widget/v1/-/CGsKF-yB" width="960" height="559" allowfullscreen="allowfullscreen"></iframe>
-        <img class="map-modal__img" src="img/map-big.jpg" width="960" height="559" alt="Офис компании по адресу ул. Строителей, дом 15">
+        <p class="map-modal__inner">
+          <img class="map-modal__img" src="img/map-big.jpg" width="960" height="559" alt="Офис компании по адресу ул. Строителей, дом 15">
+        </p>
         <button class="modal-close-button modal-close-button_map-position" type="button" aria-label="Кнопка «Закрыть модальное окно карты»"></button>
     </section> 
 
-    <script src="js/modalForm.js"></script>
-    <script src="js/modalMap.js"></script>
+    <script src="js/modalForm-optimized.js"></script>
+    <script src="js/modalMap-optimized.js"></script>
   </body>
 </html>
